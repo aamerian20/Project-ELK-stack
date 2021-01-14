@@ -70,8 +70,8 @@ Images/docker-ps-Output.png
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-10.0.1.5
-10.0.1.6
+10.0.1.5,
+10.0.1.6,
 10.0.1.7
 
 We have installed the following Beats on these machines:
@@ -79,7 +79,9 @@ filebeat
 metricbeat
 
 These Beats allow us to collect the following information from each machine:
+
 filebeat: Collects data about the file system, helps generate and organize logfiles to send to logstash and elasticsearch it is an agent that takes unix syslogs and converts it for logstash to deliver to elastic search. 
+
 metricbeat: collects machine metrics, from operating system and from services running on the server, to also send to logstash and elastic search. 
 
 ### Using the filebeat Playbook
@@ -90,4 +92,10 @@ SSH into the control node and follow the steps below:
 - Update the hosts file to include webserver IP addresses under a group called [webservers] (10.0.1.5, 10.0.1.6, 10.0.1.7)
 - Update the hosts file to include ELK-VM's IP address under a group called [Elk] (10.1.0.4)
 - Run the playbook, and navigate to http://104.209.193.157:5601/ to check that the installation worked as expected.
+
+### Linux Command line
+
+The following file contains the commands necessary to download and install the playbooks and update the configuration files:
+
+Linux/Bash Script.txt
 
