@@ -1,10 +1,10 @@
 ## Automated ELK Stack Deployment
 
 The objective is to securely set up an environment to learn about web vulnerabilities and practice various exploits.
-Three identical instances of D*mn Vulnerable Web Application (DVWA) are hosted on three distinct virtual machines to achieve redundancy.
-They are hosted behind a load balancer to distributes traffic efficiently across the servers, ensures high availability and reliability by sending requests only to servers that are online, and provides the flexibility to add or subtract servers as needed.
-Finally the open-source SIEM technology, ELK stack is hosted on a separate virtual. It can be accessed through the web, and is configured using access policies that are consistent with the Web servers.
-Filebeat and Metricbeat are used to collect network and system logs that feed into logstash, parsed by elasticsearch and ultimately available for analysis on Kibana. 
+- Three identical instances of D*mn Vulnerable Web Application (DVWA) are hosted on three distinct virtual machines to achieve redundancy.
+- They are hosted behind a load balancer to distributes traffic efficiently across the servers, ensures high availability and reliability by sending requests only to servers that are online, and provides the flexibility to add or subtract servers as needed.
+- Finally the open-source SIEM technology, ELK stack is hosted on a separate virtual. It can be accessed through the web, and is configured using access policies that are consistent with the Web servers.
+- Filebeat and Metricbeat are used to collect network and system logs that feed into logstash, parsed by elasticsearch and ultimately available for analysis on Kibana. 
 
 Configuration files are provided to simplify and standardize the deployment of Web servers and ELK server using docker containers. These files have been tested and used to generate a live ELK deployment on Azure. They can be used to recreate the entire deployment depicted below. Alternatively, you may pick and choose services as you see fit. for example you may select filebeat from the Ansible directory and leave out metricbeat.
 
