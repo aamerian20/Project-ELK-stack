@@ -1,10 +1,16 @@
 ## Automated ELK Stack Deployment
 
-The files in this repository were used to configure the network depicted below.
+The objective is to securely set up an environment to learn about web vulnerabilities and practice various exploits.
+Three identical instances of D*mn Vulnerable Web Application (DVWA) are hosted on three distinct virtual machines to achieve redundancy.
+They are hosted behind a load balancer to distributes traffic efficiently across the servers, ensures high availability and reliability by sending requests only to servers that are online, and provides the flexibility to add or subtract servers as needed.
+Finally the open-source SIEM technology, ELK stack is hosted on a separate virtual. It can be accessed through the web, and is configured using access policies that are consistent with the Web servers.
+Filebeat and Metricbeat are used to collect network and system logs that feed into logstash, parsed by elasticsearch and ultimately available for analysis on Kibana. 
+
+Configuration files are provided to simplify and standardize the deployment of Web servers and ELK server using docker containers. These files have been tested and used to generate a live ELK deployment on Azure. They can be used to recreate the entire deployment depicted below. Alternatively, you may pick and choose services as you see fit. for example you may select filebeat from the Ansible directory and leave out metricbeat.
+
+Figue 1 - Network Diagram
      ![](Images/Network-Topology.png)
-
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Ansible directory may be used to install only certain pieces of it, such as Filebeat.
-
+     
 This document contains the following details:
 - Description of the Topology
 - Access Policies
@@ -22,7 +28,7 @@ Load balancing ensures that the application will be highly available, in additio
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log data and system metrics and statistics.
 
-The configuration details of each machine may be found below.
+Table 1 - Configuration details for each machine
 
 | Name                 | Function            | IP Address | Operating System |
 |----------------------|---------------------|------------|------------------|
@@ -41,7 +47,7 @@ Only the Load Balancer (13.92.31.233) machine can accept connections from the In
 
 Machines within the network can only be accessed by Jumpbox Provisioner (10.0.1.4).
 
-A summary of the access policies in place can be found in the table below.
+Table 2 -  Summary of Access Policies
 
 | Name                                 | Publicly Accessible | Allowed IP Addresses |
 |--------------------------------------|---------------------|----------------------|
