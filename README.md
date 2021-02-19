@@ -15,14 +15,15 @@ The objective is to securely set up an environment to learn about web vulnerabil
 - The open-source SIEM technology, ELK stack is hosted on a separate virtual machine. It can be accessed through the web, and is configured using access policies that are consistent with the Web servers'.
 - Filebeat and Metricbeat to collect network and system logs and forward them to Logstash. Elasticsearch stores the logs and makes it available for further analysis on Kibana. 
 
+Figue 1 - Network Diagram
+     ![](Images/Network-Topology.png)
+
+
 Ansible playbooks are provided to simplify and standardize the deployment of Web servers and ELK server using docker containers. These files have been tested and used to generate a live ELK deployment on Azure. They can be used to recreate the entire deployment depicted below. Alternatively, you may pick and choose services as you see fit. for example you may select filebeat from the Ansible directory and leave out metricbeat.
 
 Load balancer is used to distribute traffic efficiently across the servers, ensure high availability and reliability by sending requests only to servers that are online, and provide the flexibility to add or subtract servers as needed.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log data and system metrics and statistics.
-
-Figue 1 - Network Diagram
-     ![](Images/Network-Topology.png)
 
 
 Table 1 - Configuration details for each machine
