@@ -97,7 +97,7 @@ SSH into the control node and follow the steps below:
 - Copy the filebeat_playbook.yml.txt file to /etc/ansible/roles
 - Update the hosts file to include webserver IP addresses under a group called [webservers] (10.0.1.5, 10.0.1.6, 10.0.1.7)
 - Update the hosts file to include ELK-VM's IP address under a group called [Elk] (10.1.0.4)
-- Run the playbook, and navigate to http://104.209.193.157:5601/ to check that the installation worked as expected.
+- Run the playbook, and navigate to http:// 'Public-IP-ELK-VM':5601/ to check that the installation worked as expected.
 
 ### Linux Command line
 
