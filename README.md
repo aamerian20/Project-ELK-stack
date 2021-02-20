@@ -103,5 +103,5 @@ SSH into the control node and follow the steps below:
 
 The following file contains the commands necessary to download and install the playbooks and update the configuration files:
 
-Linux/Bash Script.txt
+<a href="Linux/Bash%20Scripts.md">Linux Bash Script</a>
 
